@@ -9,12 +9,12 @@ export default function Dresscode() {
             <motion.div
                 className="
                 flex flex-col items-center justify-center
-                w-160 md:w-3xl lg:w-5xl xl:w-7xl 2xl:w-384 3xl:w-480
+                w-90 sm:w-160 md:w-3xl lg:w-5xl xl:w-7xl 2xl:w-384 3xl:w-480
                 min-h-screen 
-                py-10 gap-2
+                sm:py-10 gap-2
                 text-4xl font-herr-von-muellerhoff text-black
                 bg-cover bg-center bg-no-repeat
-                mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
+                sm:mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
                 "
                 style = {{ backgroundImage: `
                     linear-gradient(to top, transparent 90%, #F3EFE4 100%),    
@@ -39,8 +39,10 @@ export default function Dresscode() {
                 </motion.p>
                 <motion.div
                     className="
-                    flex flex-col items-center justify-center 
-                    w-80 md:w-96 lg:w-102 xl:w-126 2xl:w-148 3xl:w-3xl
+                    flex flex-col items-center justify-center
+                    h-80 sm:h-fit
+                    w-56 sm:w-80 md:w-96 lg:w-102 xl:w-126 2xl:w-148 3xl:w-3xl
+                    mb-9 sm:mb-0
                     "
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -52,12 +54,12 @@ export default function Dresscode() {
                     <motion.p 
                         className="
                         text-justify font-baskervville 
-                        text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
+                        text-[14px] sm:text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
                         px-2 md:px-4 lg:px-8 xl:px-8 3xl:px-10
                         py-6 md:py-10 lg:py-10 xl:py-14 2xl:py-16 3xl:py-12
-                        mx-8 md:mx-10 lg:mx-0
-                        mb-10 md:mb-8 lg:mb-16 xl:mb-18 2xl:mb-22 3xl:mb-28
-                        lg:leading-relaxed
+                        sm:mx-8 md:mx-10 lg:mx-0
+                        sm:mb-10 md:mb-8 lg:mb-16 xl:mb-18 2xl:mb-22 3xl:mb-28
+                        leading-5 sm:leading-none lg-leading-relaxed
                         bg-[#F5F4EF]/35 backdrop-blur-md
                         "
                         initial={{ opacity: 0 }}

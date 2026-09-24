@@ -471,8 +471,8 @@ export default function Confirmacion() {
             <motion.div
                 className="
                     flex flex-col items-center justify-center
-                    w-xl md:w-2xl lg:w-3xl xl:w-5xl 2xl:w-7xl
-                    p-10 mt-5
+                    sm:w-xl md:w-2xl lg:w-3xl xl:w-5xl 2xl:w-7xl
+                    p-5 sm:p-10 mt-5
                     bg-[#F3EFE4]/80 backdrop-blur-md
                     rounded-3xl
                     border border-[#4b6756]
