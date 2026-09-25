@@ -54,15 +54,17 @@ export default function Alojamiento() {
             >
                 Alojamiento
             </motion.p>
-            <div className="grid grid-cols-1 grid-rows-5 grid-flow-col place-items-center gap-6">
+            <div className="grid grid-cols-1 grid-rows-5 grid-flow-col place-items-center gap-4 sm:gap-6">
                 {Object.values(hostales).map((hostal, index) => (
                     <motion.a 
                         className="
                             group
-                            flex flex-row gap-4 w-full 
-                            h-32 3xl:h-52 
-                            px-28 3xl:px-36
-                            font-baskervville text-xl text-[#526B5D]
+                            flex flex-row w-full
+                            sm:gap-4 
+                            sm:h-32 3xl:h-52 
+                            px-4 sm:px-28 3xl:px-36
+                            py-2 sm:py-0
+                            font-baskervville text-[#526B5D]
                             rounded-xl bg-[#F5F4EF]/80 backdrop-blur-md overflow-hidden
                             border-2 border-[#526B5D]
                             hover:bg-[#526B5D] hover:-translate-y-3 hover:text-[#F5F4EF] transition-all duration-500
@@ -71,7 +73,7 @@ export default function Alojamiento() {
                         href={hostal.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        initial={{ 
+                        initial={{
                             opacity: 0,
                         }}
                         animate={{ 
@@ -83,12 +85,12 @@ export default function Alojamiento() {
                             ease: "easeInOut",
                         }}
                     >
-                        <div className="flex flex-col justify-center items-center w-full h-full gap-2">
-                            <p className="font-light xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
+                        <div className="flex flex-col justify-center items-center w-full h-full sm:gap-2">
+                            <p className="font-light text-lg sm:text-xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
                                 {hostal.nombre}
                             </p>
 
-                            <p className="text-sm xl:text-xl 2xl:text-xl 3xl:text-4xl">
+                            <p className="text-[12px] sm:text-sm xl:text-xl 2xl:text-xl 3xl:text-4xl">
                                 {hostal.direccion}
                             </p>
                         </div>

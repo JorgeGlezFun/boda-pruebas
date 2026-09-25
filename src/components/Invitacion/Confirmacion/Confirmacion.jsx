@@ -471,14 +471,14 @@ export default function Confirmacion() {
             <motion.div
                 className="
                     flex flex-col items-center justify-center
-                    sm:w-xl md:w-2xl lg:w-3xl xl:w-5xl 2xl:w-7xl
+                    w-90 sm:w-xl md:w-2xl lg:w-3xl xl:w-5xl 2xl:w-7xl
                     p-5 sm:p-10 mt-5
                     bg-[#F3EFE4]/80 backdrop-blur-md
                     rounded-3xl
                     border border-[#4b6756]
                     text-[#4b6756]
                     font-baskervville
-                    text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl
+                    text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl
                 "
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -1243,7 +1243,7 @@ export default function Confirmacion() {
                             className="
                                 flex
                                 flex-row
-                                gap-6
+                                gap-2 sm:gap-6
                                 w-full
                             "
                         >
@@ -1251,7 +1251,7 @@ export default function Confirmacion() {
                                 className="
                                     flex
                                     flex-col
-                                    gap-2
+                                    gap-6 sm:gap-2
                                     w-full
                                 "
                             >
@@ -1278,7 +1278,7 @@ export default function Confirmacion() {
                                         outline-none
                                     "
                                 >
-                                    <option value="">
+                                    <option value="Sin preferencia">
                                         Sin preferencia
                                     </option>
 

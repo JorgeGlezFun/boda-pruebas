@@ -21,31 +21,31 @@ const eventIcons = {
 
 const events = [
     {
-        time: "18:00",
+        time: "12:00",
         title: "Ceremonia",
         description: "El comienzo de nuestro sí, quiero.",
         icon: "ceremony",
     },
     {
-        time: "19:00",
+        time: "13:00",
         title: "Aperitivo",
         description: "Brindaremos juntos para celebrar.",
         icon: "aperitif",
     },
     {
-        time: "21:00",
+        time: "14:00",
         title: "Banquete",
         description: "Una mesa compartida con quienes más queremos.",
         icon: "banquet",
     },
     {
-        time: "23:00",
+        time: "16:00",
         title: "Tarta",
         description: "El momento más dulce de la noche.",
         icon: "cake",
     },
     {
-        time: "23:30",
+        time: "18:00",
         title: "Fiesta",
         description: "Abrimos la pista para celebrarlo juntos.",
         icon: "party",
@@ -271,16 +271,16 @@ export default function Timeline() {
                                         ease: "easeOut",
                                     }}
                                 >
-                                    <time className="block text-sm italic text-[#526B5D]/75 sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] 2xl:text-2xl 3xl:text-[1.65rem]">
+                                    <time className="block text-base italic text-[#526B5D]/75 sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] 2xl:text-2xl 3xl:text-[1.65rem]">
                                         {event.time}
                                     </time>
 
-                                    <h2 className="mt-1 text-xl font-normal font-herr-von-muellerhoff leading-tight text-[#526B5D] sm:text-4xl md:text-5xl lg:text-[2rem] xl:text-6xl 2xl:text-[2.6rem] 3xl:text-7xl">
+                                    <h2 className="mt-1 text-3xl font-normal font-herr-von-muellerhoff leading-tight text-[#526B5D] sm:text-4xl md:text-5xl lg:text-[2rem] xl:text-6xl 2xl:text-[2.6rem] 3xl:text-7xl">
                                         {event.title}
                                     </h2>
 
                                     {event.description && (
-                                        <p className="mt-2 text-xs leading-relaxed text-[#526B5D]/75 sm:text-sm md:text-base lg:mt-3 lg:text-lg xl:text-xl 2xl:text-[1.35rem] 3xl:text-2xl">
+                                        <p className="sm:mt-2 text-xs sm:leading-relaxed text-[#526B5D]/75 sm:text-sm md:text-base lg:mt-3 lg:text-lg xl:text-xl 2xl:text-[1.35rem] 3xl:text-2xl">
                                             {event.description}
                                         </p>
                                     )}

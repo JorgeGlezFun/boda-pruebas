@@ -40,8 +40,8 @@ export default function Dresscode() {
                 <motion.div
                     className="
                     flex flex-col items-center justify-center
-                    h-80 sm:h-fit
-                    w-56 sm:w-80 md:w-96 lg:w-102 xl:w-126 2xl:w-148 3xl:w-3xl
+                    sm:h-fit
+                    w-50 sm:w-80 md:w-96 lg:w-102 xl:w-126 2xl:w-148 3xl:w-3xl
                     mb-9 sm:mb-0
                     "
                     initial={{ opacity: 0 }}
@@ -54,9 +54,9 @@ export default function Dresscode() {
                     <motion.p 
                         className="
                         text-justify font-baskervville 
-                        text-[14px] sm:text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
+                        text-[12px] sm:text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
                         px-2 md:px-4 lg:px-8 xl:px-8 3xl:px-10
-                        py-6 md:py-10 lg:py-10 xl:py-14 2xl:py-16 3xl:py-12
+                        py-2 sm:py-6 md:py-10 lg:py-10 xl:py-14 2xl:py-16 3xl:py-12
                         sm:mx-8 md:mx-10 lg:mx-0
                         sm:mb-10 md:mb-8 lg:mb-16 xl:mb-18 2xl:mb-22 3xl:mb-28
                         leading-5 sm:leading-none lg-leading-relaxed
