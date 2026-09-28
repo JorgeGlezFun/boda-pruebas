@@ -11,7 +11,7 @@ import Confirmacion from "./components/Invitacion/Confirmacion/Confirmacion";
 function App() {
     
     return (
-        <main className="bg-[#F3EFE4]">   
+        <main className="bg-[#F3EFE4] overflow-hidden">   
             <div>
                 <Inicio />
                 <Poesia />
