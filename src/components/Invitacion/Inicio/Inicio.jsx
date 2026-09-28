@@ -11,7 +11,7 @@ export default function Inicio() {
                 font-ballet text-[#6a837f]
                 text-7xl
                 select-none 
-                sm:mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
+                mb-15 sm:mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
                 "
                 style = {{ backgroundImage: `
                     linear-gradient(to bottom, transparent 90%, #F3EFE4 100%),    
