@@ -45,9 +45,9 @@ export default function Direccion() {
         >
             <motion.div
                 className="
-                grid grid-cols-2 grid-row-2 
-                w-160 md:w-3xl lg:w-5xl xl:w-7xl 2xl:w-364 3xl:w-[120rem]
-                text-black gap-4 py-12 px-4 
+                grid grid-cols-[auto_auto] grid-row-2 sm:grid-cols-2
+                sm:w-160 md:w-3xl lg:w-5xl xl:w-7xl 2xl:w-364 3xl:w-[120rem]
+                text-black sm:gap-4 py-12 px-4 
                 sm:px-6 lg:px-8
                 mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
                 "
@@ -67,21 +67,24 @@ export default function Direccion() {
                     >
                         Ceremonia
                     </motion.p>
-                    <motion.p variants={itemVariants} className="font-herr-von-muellerhoff text-lg sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
-                        Parroquia Santa María de Jesús
+                    <motion.p variants={itemVariants} className="font-herr-von-muellerhoff text-xl sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
+                        Pqa. Santa María de Jesús
                     </motion.p>
-                    <motion.p variants={itemVariants} className="font-baskervville text-lg sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
+                    <motion.p variants={itemVariants} className="font-baskervville text-xl sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
                         13:30
                     </motion.p>
                 </motion.div>
                 <motion.div
-                    className="flex items-center justify-center h-fit rounded-xl border-[#F3EFE4] overflow-hidden"
+                    className="
+                        flex items-center justify-center 
+                        w-50 sm:w-full
+                        rounded-xl border-[#F3EFE4] overflow-hidden"
                     variants={itemVariants}
                 >
                     <motion.img 
                         src={parroquia} alt="Parroquía Santa María de Jesús" 
                         className="
-                        h-full
+                        w-full
                         bg-cover bg-center bg-no-repeat
                         [mask-image:radial-gradient(ellipse_at_center,#F3EFE4_50%,transparent_90%)]
                         "
@@ -89,7 +92,10 @@ export default function Direccion() {
                 </motion.div>
                 {/* CONVITE */}
                 <motion.div
-                    className="flex items-center justify-center h-fit rounded-xl border-[#F3EFE4] overflow-hidden"
+                    className="
+                        flex items-center justify-center 
+                        w-50 sm:w-full
+                        rounded-xl border-[#F3EFE4] overflow-hidden"
                     variants={itemVariants}
                 >
                     <motion.img 
@@ -115,10 +121,10 @@ export default function Direccion() {
                     >
                         Celebración
                     </motion.p>
-                    <motion.p variants={itemVariants} className="font-herr-von-muellerhoff text-lg sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
+                    <motion.p variants={itemVariants} className="font-herr-von-muellerhoff text-xl sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
                         Salón las Adelfas
                     </motion.p>
-                    <motion.p variants={itemVariants} className="font-baskervville text-lg sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
+                    <motion.p variants={itemVariants} className="font-baskervville text-xl sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
                         15:00
                     </motion.p>
                 </motion.div>
