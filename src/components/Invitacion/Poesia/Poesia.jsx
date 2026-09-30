@@ -55,7 +55,7 @@ export default function Poesia() {
                     row-start-2 sm:row-start-1 col-start-2
                     relative z-0
                     flex items-center justify-center rounded-full mx-6
-                    backdrop-blur-md bg-red-500
+                    backdrop-blur-md
                     -top-16 sm:top-39 md:top-46 lg:top-60 xl:top-70 2xl:top-66 3xl:top-60
                     right-21 sm:-left-2 lg:left-2 xl:left-3 2xl:left-5 3xl:left-12
                     h-96 sm:h-70 md:h-86 lg:h-112 xl:h-144 2xl:h-172 3xl:h-200
@@ -88,10 +88,11 @@ export default function Poesia() {
                 <motion.div 
                     className="
                     relative 
-                    right-14 sm:right-9 md:right-10 xl:right-15
+                    right-15 sm:right-9 md:right-10 xl:right-15
                     bottom-40 sm:bottom-5 
                     w-45 sm:w-fit
-                    col-start-3 row-start-3 sm:row-start-2 flex flex-col items-center justify-center 
+                    col-start-3 row-start-3 sm:row-start-2 
+                    flex flex-col items-center justify-center 
                     px-2 xl:px-4
                     pt-2 xl:pt-4
                     bg-[#F5F4EF] -rotate-2 shadow-xl

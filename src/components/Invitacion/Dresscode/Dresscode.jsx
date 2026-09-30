@@ -60,7 +60,7 @@ export default function Dresscode() {
                         sm:mx-8 md:mx-10 lg:mx-0
                         sm:mb-10 md:mb-8 lg:mb-16 xl:mb-18 2xl:mb-22 3xl:mb-28
                         leading-5 sm:leading-none lg-leading-relaxed
-                        bg-red-500 sm:bg-[#F5F4EF]/35 backdrop-blur-md
+                        bg-[#F5F4EF]/35 backdrop-blur-md
                         "
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}

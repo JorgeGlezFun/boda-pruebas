@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import parroquia from "../../../assets/img/acuarelas/parroquia.png";
 import salon from "../../../assets/img/acuarelas/adelfas.png";
+import fondo from "../../../assets/img/fondos/direccion/fondo_direccion.png";
+
 export default function Direccion() {
     const containerVariants = {
         hidden: {},
@@ -29,11 +31,17 @@ export default function Direccion() {
     return (
         <motion.section
             id="direccion"
-            className="flex items-center justify-center"
+            className="flex items-center justify-center bg-cover bg-center bg-no-repeat"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.35 }}
             variants={containerVariants}
+            style = {{ backgroundImage: `
+                    linear-gradient(to top, transparent 90%, #F3EFE4 100%),    
+                    linear-gradient(to bottom, transparent 90%, #F3EFE4 100%),    
+                    url(${fondo})
+                    ` }}
+
         >
             <motion.div
                 className="

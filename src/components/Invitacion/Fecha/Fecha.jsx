@@ -4,16 +4,16 @@ export default function Fecha() {
     return (
         <motion.section
             id="fecha"
-            className="flex items-center justify-center h-fit pb-10 sm:py-10"
+            className="flex items-center justify-center h-fit pb-30 sm:py-10"
         >
             <motion.div
                 className="
                     flex flex-row items-center justify-center gap-2
-                    px-4 md:px-10 lg:px-24 xl:px-32 2xl:px-40 3xl:px-48
-                    py-2
+                    px-8 md:px-10 lg:px-24 xl:px-32 2xl:px-40 3xl:px-48
+                    py-4
                     rounded-full
                     bg-[#526B5D]
-                    font-baskervville text-2xl sm:text-4xl
+                    font-baskervville text-4xl sm:text-4xl
                     overflow-hidden
                     text-white
                 "
@@ -38,7 +38,7 @@ export default function Fecha() {
                 </motion.div>
 
                 <motion.p
-                    className="text-4xl font-libre-baskerville "
+                    className="text-6xl font-libre-baskerville "
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}

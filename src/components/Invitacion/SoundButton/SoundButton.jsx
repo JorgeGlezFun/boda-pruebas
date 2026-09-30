@@ -114,7 +114,7 @@ export default function SoundButton() {
                     toggleMusic();
                 }}
                 className="
-                    absolute
+                    fixed
                     right-4
                     top-4
                     z-[100]
