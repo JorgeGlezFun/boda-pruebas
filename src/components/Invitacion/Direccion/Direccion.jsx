@@ -71,7 +71,7 @@ export default function Direccion() {
                         Pqa. Santa María de Jesús
                     </motion.p>
                     <motion.p variants={itemVariants} className="font-baskervville text-xl sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
-                        13:30
+                        13:00
                     </motion.p>
                 </motion.div>
                 <motion.div
