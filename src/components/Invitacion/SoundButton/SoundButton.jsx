@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import weddingSong from "../../../assets/audio/boda.mp3";
+import cancion from "../../../assets/audio/audio_invitacion.mp3";
 
 export default function SoundButton() {
     const audioRef = useRef(null);
     const fadeRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
-    const maxVolume = 0.5;
-    const fadeVolume = (from, to, duration, callback) => {
 
+    const maxVolume = 0.5;
+
+    const fadeVolume = (from, to, duration, callback) => {
         if (fadeRef.current) {
             cancelAnimationFrame(fadeRef.current);
         }
@@ -19,54 +20,55 @@ export default function SoundButton() {
                 (currentTime - startTime) / duration,
                 1
             );
-            const volume =
-                from + (to - from) * progress;
+
+            const volume = from + (to - from) * progress;
+
             if (audioRef.current) {
                 audioRef.current.volume = volume;
             }
+
             if (progress < 1) {
-                fadeRef.current =
-                    requestAnimationFrame(animate);
+                fadeRef.current = requestAnimationFrame(animate);
             } else {
                 fadeRef.current = null;
+
                 if (callback) {
                     callback();
                 }
             }
         };
-        fadeRef.current =
-            requestAnimationFrame(animate);
+
+        fadeRef.current = requestAnimationFrame(animate);
     };
 
     const playMusic = async () => {
         const audio = audioRef.current;
+
         if (!audio) return;
+
         try {
-            // Empezamos sin volumen
-            audio.volume = 0;
-            // El loop nativo reinicia la canción
             audio.loop = true;
+            audio.volume = 0;
+
             await audio.play();
-            // Fade-in
-            fadeVolume(
-                0,
-                maxVolume,
-                1500
-            );
+
+            fadeVolume(0, maxVolume, 1500);
+
             setIsPlaying(true);
         } catch (error) {
-            console.error(
-                "Error al reproducir el audio:",
-                error
-            );
+            // El navegador ha bloqueado el autoplay.
+            // La reproducción se intentará con la primera interacción.
+            console.log("Autoplay bloqueado por el navegador.");
         }
     };
 
     const pauseMusic = () => {
         const audio = audioRef.current;
+
         if (!audio) return;
+
         const currentVolume = audio.volume;
-        // Fade-out
+
         fadeVolume(
             currentVolume,
             0,
@@ -87,11 +89,29 @@ export default function SoundButton() {
     };
 
     useEffect(() => {
+        // Intentamos iniciar la música automáticamente
+        playMusic();
+
+        // Si el navegador bloquea el autoplay,
+        // la iniciamos con la primera interacción.
+        const startOnInteraction = () => {
+            if (!audioRef.current || !isPlaying) {
+                playMusic();
+            }
+        };
+
+        window.addEventListener("pointerdown", startOnInteraction, {
+            once: true,
+        });
+
         return () => {
+            window.removeEventListener(
+                "pointerdown",
+                startOnInteraction
+            );
+
             if (fadeRef.current) {
-                cancelAnimationFrame(
-                    fadeRef.current
-                );
+                cancelAnimationFrame(fadeRef.current);
             }
         };
     }, []);
@@ -100,10 +120,11 @@ export default function SoundButton() {
         <>
             <audio
                 ref={audioRef}
-                src={weddingSong}
+                src={cancion}
                 preload="auto"
                 loop
             />
+
             <button
                 type="button"
                 onPointerDown={(e) => {
@@ -150,6 +171,7 @@ export default function SoundButton() {
                         fill="currentColor"
                     >
                         <path d="M3 9v6h4l5 4V5L7 9H3Z" />
+
                         <path
                             d="M16 8.5a4.5 4.5 0 0 1 0 7"
                             fill="none"
@@ -157,6 +179,7 @@ export default function SoundButton() {
                             strokeWidth="2"
                             strokeLinecap="round"
                         />
+
                         <path
                             d="M19 5.5a8.5 8.5 0 0 1 0 13"
                             fill="none"
@@ -173,6 +196,7 @@ export default function SoundButton() {
                         fill="currentColor"
                     >
                         <path d="M3 9v6h4l5 4V5L7 9H3Z" />
+
                         <path
                             d="m16 9 5 5"
                             fill="none"
@@ -180,6 +204,7 @@ export default function SoundButton() {
                             strokeWidth="2"
                             strokeLinecap="round"
                         />
+
                         <path
                             d="m21 9-5 5"
                             fill="none"
@@ -193,3 +218,4 @@ export default function SoundButton() {
         </>
     );
 }
+
